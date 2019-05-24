@@ -99,5 +99,9 @@ if __name__ == '__main__':
     outfile = os.path.abspath(os.path.expanduser(parsed_args.outfile))
     assert os.path.exists(os.path.dirname(infile))
     data = read_tsv(infile)
-    # write_study_locations(data, outfile)
-    write_location_studies(data, outfile)
+    if parsed_args.analysis == 'study-locations':
+        write_study_locations(data, outfile)
+    elif parsed_args.analysis == 'location-studies':
+        write_location_studies(data, outfile)
+    else:
+        raise NotImplementedError
