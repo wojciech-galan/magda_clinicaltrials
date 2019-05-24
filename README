@@ -1,0 +1,9 @@
+Testowane na Pythonie 3.5
+
+Najpierw instalujesz Pythona. Potem zależności komendą (wykonaj w tym katalogu):
+pip install -r requirements.txt
+
+Pobierasz tab-separated values (tsv) ze stronki. Potem uruchamiasz:
+python3 clinicaltrials sciezka_do_tsv sciezka_gdzie_chcesz_miec_wynik --analysis study-locations
+python3 clinicaltrials sciezka_do_tsv sciezka_gdzie_chcesz_miec_wynik --analysis location-studies
+(pierwsze dla pierwszego typu analizy, drugie dla drugiego).
